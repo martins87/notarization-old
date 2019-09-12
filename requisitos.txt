@@ -1,0 +1,18 @@
+REQUISITOS
+*	página "Verificar Integridade do Arquivo"
+*		-> já mostrar que já foi registrado
+*		mostrar:
+*			nome do arquivo
+*			hash
+*			tx
+*			link da tx
+*			data, hora, bloco
+*			conta
+		vários arquivos
+			carregar todos e verificar registro de todos
+*	lista
+*		arquivos registrados
+*			data, nome, hash, tx link, conta
+	pesquisa
+		filtro:
+			?

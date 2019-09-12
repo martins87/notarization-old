@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Notarization</title>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="../scripts/notarization.js"></script>
+        
+    </head>
+    <body style="background-color: #fff">
+        <br><br><br><br>
+        <div class="container">
+            <div class="card shadow p-3 mb-5">
+                <div class="card-header text-center">
+                    <h1><b>Register Your Data On The Blockchain</b></h1>
+                </div>
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row py-4">
+                            <div class="col">
+                                <h5><b>Account: </b><span id="address"></span></h5>
+                                <h5><b>Balance: </b><span id="ETHbalance"></span></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <form name="sha256Hash">
+                                    <textarea id="dataToRegister" placeholder="Data to register..." autofocus
+                                        onkeyup="setHashValue(this.form.dataToRegister.value)" rows="10" cols="100"></textarea><br>
+                                </form>
+                                <p>
+                                    <b>SHA-256 hash of your data: </b>
+                                    <span id="dataHash">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</span>
+                                </p>
+                                <button type="button" class="btn btn-success" onclick="register()">Register</button><br>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col">
+                                <h5><span id="txLink"></span><br/></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
